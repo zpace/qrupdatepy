@@ -1,0 +1,694 @@
+!    -*- f90 -*-
+! Note: the context of this file is case sensitive.
+
+subroutine caxcpy(n,a,x,incx,y,incy) ! in caxcpy.f
+    integer :: n
+    complex :: a
+    complex dimension(*) :: x
+    integer :: incx
+    complex dimension(*) :: y
+    integer :: incy
+end subroutine caxcpy
+subroutine cch1dn(n,r,ldr,u,rw,info) ! in cch1dn.f
+    integer :: n
+    complex dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    complex dimension(*) :: u
+    real dimension(*) :: rw
+    integer :: info
+end subroutine cch1dn
+subroutine cch1up(n,r,ldr,u,w) ! in cch1up.f
+    integer :: n
+    complex dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    complex dimension(*) :: u
+    real dimension(*) :: w
+end subroutine cch1up
+subroutine cchdex(n,r,ldr,j,rw) ! in cchdex.f
+    integer :: n
+    complex dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    integer :: j
+    real dimension(*) :: rw
+end subroutine cchdex
+subroutine cchinx(n,r,ldr,j,u,rw,info) ! in cchinx.f
+    integer :: n
+    complex dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    integer :: j
+    complex dimension(*) :: u
+    complex dimension(*) :: rw
+    integer :: info
+end subroutine cchinx
+subroutine cchshx(n,r,ldr,i,j,w,rw) ! in cchshx.f
+    integer :: n
+    complex dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    integer :: i
+    integer :: j
+    complex dimension(*) :: w
+    real dimension(*) :: rw
+end subroutine cchshx
+subroutine cgqvec(m,n,q,ldq,u) ! in cgqvec.f
+    integer :: m
+    integer :: n
+    complex dimension(ldq,*) :: q
+    integer, optional,check(shape(q,0)==ldq),depend(q) :: ldq=shape(q,0)
+    complex dimension(*) :: u
+end subroutine cgqvec
+subroutine clu1up(m,n,l,ldl,r,ldr,u,v) ! in clu1up.f
+    integer :: m
+    integer :: n
+    complex dimension(ldl,*) :: l
+    integer, optional,check(shape(l,0)==ldl),depend(l) :: ldl=shape(l,0)
+    complex dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    complex dimension(*) :: u
+    complex dimension(*) :: v
+end subroutine clu1up
+subroutine clup1up(m,n,l,ldl,r,ldr,p,u,v,w) ! in clup1up.f
+    integer :: m
+    integer :: n
+    complex dimension(ldl,*) :: l
+    integer, optional,check(shape(l,0)==ldl),depend(l) :: ldl=shape(l,0)
+    complex dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    integer dimension(*) :: p
+    complex dimension(*) :: u
+    complex dimension(*) :: v
+    complex dimension(*) :: w
+end subroutine clup1up
+subroutine cqhqr(m,n,r,ldr,c,s) ! in cqhqr.f
+    integer :: m
+    integer :: n
+    complex dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    real dimension(*) :: c
+    complex dimension(*) :: s
+end subroutine cqhqr
+subroutine cqr1up(m,n,k,q,ldq,r,ldr,u,v,w,rw) ! in cqr1up.f
+    integer :: m
+    integer :: n
+    integer :: k
+    complex dimension(ldq,*) :: q
+    integer, optional,check(shape(q,0)==ldq),depend(q) :: ldq=shape(q,0)
+    complex dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    complex dimension(*) :: u
+    complex dimension(*) :: v
+    complex dimension(*) :: w
+    real dimension(*) :: rw
+end subroutine cqr1up
+subroutine cqrdec(m,n,k,q,ldq,r,ldr,j,rw) ! in cqrdec.f
+    integer :: m
+    integer :: n
+    integer :: k
+    complex dimension(ldq,*) :: q
+    integer, optional,check(shape(q,0)==ldq),depend(q) :: ldq=shape(q,0)
+    complex dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    integer :: j
+    real dimension(*) :: rw
+end subroutine cqrdec
+subroutine cqrder(m,n,q,ldq,r,ldr,j,w,rw) ! in cqrder.f
+    integer :: m
+    integer :: n
+    complex dimension(ldq,*) :: q
+    integer, optional,check(shape(q,0)==ldq),depend(q) :: ldq=shape(q,0)
+    complex dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    integer :: j
+    complex dimension(*) :: w
+    real dimension(*) :: rw
+end subroutine cqrder
+subroutine cqrinc(m,n,k,q,ldq,r,ldr,j,x,rw) ! in cqrinc.f
+    integer :: m
+    integer :: n
+    integer :: k
+    complex dimension(ldq,*) :: q
+    integer, optional,check(shape(q,0)==ldq),depend(q) :: ldq=shape(q,0)
+    complex dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    integer :: j
+    complex dimension(*) :: x
+    real dimension(*) :: rw
+end subroutine cqrinc
+subroutine cqrinr(m,n,q,ldq,r,ldr,j,x,rw) ! in cqrinr.f
+    integer :: m
+    integer :: n
+    complex dimension(ldq,*) :: q
+    integer, optional,check(shape(q,0)==ldq),depend(q) :: ldq=shape(q,0)
+    complex dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    integer :: j
+    complex dimension(*) :: x
+    real dimension(*) :: rw
+end subroutine cqrinr
+subroutine cqrot(dir,m,n,q,ldq,c,s) ! in cqrot.f
+    character :: dir
+    integer :: m
+    integer :: n
+    complex dimension(ldq,*) :: q
+    integer, optional,check(shape(q,0)==ldq),depend(q) :: ldq=shape(q,0)
+    real dimension(*) :: c
+    complex dimension(*) :: s
+end subroutine cqrot
+subroutine cqrqh(m,n,r,ldr,c,s) ! in cqrqh.f
+    integer :: m
+    integer :: n
+    complex dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    real dimension(*) :: c
+    complex dimension(*) :: s
+end subroutine cqrqh
+subroutine cqrshc(m,n,k,q,ldq,r,ldr,i,j,w,rw) ! in cqrshc.f
+    integer :: m
+    integer :: n
+    integer :: k
+    complex dimension(ldq,*) :: q
+    integer, optional,check(shape(q,0)==ldq),depend(q) :: ldq=shape(q,0)
+    complex dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    integer :: i
+    integer :: j
+    complex dimension(*) :: w
+    real dimension(*) :: rw
+end subroutine cqrshc
+subroutine cqrtv1(n,u,w) ! in cqrtv1.f
+    integer :: n
+    complex dimension(*) :: u
+    real dimension(*) :: w
+end subroutine cqrtv1
+subroutine dch1dn(n,r,ldr,u,w,info) ! in dch1dn.f
+    integer :: n
+    double precision dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    double precision dimension(*) :: u
+    double precision dimension(*) :: w
+    integer :: info
+end subroutine dch1dn
+subroutine dch1up(n,r,ldr,u,w) ! in dch1up.f
+    integer :: n
+    double precision dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    double precision dimension(*) :: u
+    double precision dimension(*) :: w
+end subroutine dch1up
+subroutine dchdex(n,r,ldr,j,w) ! in dchdex.f
+    integer :: n
+    double precision dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    integer :: j
+    double precision dimension(*) :: w
+end subroutine dchdex
+subroutine dchinx(n,r,ldr,j,u,w,info) ! in dchinx.f
+    integer :: n
+    double precision dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    integer :: j
+    double precision dimension(*) :: u
+    double precision dimension(*) :: w
+    integer :: info
+end subroutine dchinx
+subroutine dchshx(n,r,ldr,i,j,w) ! in dchshx.f
+    integer :: n
+    double precision dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    integer :: i
+    integer :: j
+    double precision dimension(*) :: w
+end subroutine dchshx
+subroutine dgqvec(m,n,q,ldq,u) ! in dgqvec.f
+    integer :: m
+    integer :: n
+    double precision dimension(ldq,*) :: q
+    integer, optional,check(shape(q,0)==ldq),depend(q) :: ldq=shape(q,0)
+    double precision dimension(*) :: u
+end subroutine dgqvec
+subroutine dlu1up(m,n,l,ldl,r,ldr,u,v) ! in dlu1up.f
+    integer :: m
+    integer :: n
+    double precision dimension(ldl,*) :: l
+    integer, optional,check(shape(l,0)==ldl),depend(l) :: ldl=shape(l,0)
+    double precision dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    double precision dimension(*) :: u
+    double precision dimension(*) :: v
+end subroutine dlu1up
+subroutine dlup1up(m,n,l,ldl,r,ldr,p,u,v,w) ! in dlup1up.f
+    integer :: m
+    integer :: n
+    double precision dimension(ldl,*) :: l
+    integer, optional,check(shape(l,0)==ldl),depend(l) :: ldl=shape(l,0)
+    double precision dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    integer dimension(*) :: p
+    double precision dimension(*) :: u
+    double precision dimension(*) :: v
+    double precision dimension(*) :: w
+end subroutine dlup1up
+subroutine dqhqr(m,n,r,ldr,c,s) ! in dqhqr.f
+    integer :: m
+    integer :: n
+    double precision dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    double precision dimension(*) :: c
+    double precision dimension(*) :: s
+end subroutine dqhqr
+subroutine dqr1up(m,n,k,q,ldq,r,ldr,u,v,w) ! in dqr1up.f
+    integer :: m
+    integer :: n
+    integer :: k
+    double precision dimension(ldq,*) :: q
+    integer, optional,check(shape(q,0)==ldq),depend(q) :: ldq=shape(q,0)
+    double precision dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    double precision dimension(*) :: u
+    double precision dimension(*) :: v
+    double precision dimension(*) :: w
+end subroutine dqr1up
+subroutine dqrdec(m,n,k,q,ldq,r,ldr,j,w) ! in dqrdec.f
+    integer :: m
+    integer :: n
+    integer :: k
+    double precision dimension(ldq,*) :: q
+    integer, optional,check(shape(q,0)==ldq),depend(q) :: ldq=shape(q,0)
+    double precision dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    integer :: j
+    double precision dimension(*) :: w
+end subroutine dqrdec
+subroutine dqrder(m,n,q,ldq,r,ldr,j,w) ! in dqrder.f
+    integer :: m
+    integer :: n
+    double precision dimension(ldq,*) :: q
+    integer, optional,check(shape(q,0)==ldq),depend(q) :: ldq=shape(q,0)
+    double precision dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    integer :: j
+    double precision dimension(*) :: w
+end subroutine dqrder
+subroutine dqrinc(m,n,k,q,ldq,r,ldr,j,x,w) ! in dqrinc.f
+    integer :: m
+    integer :: n
+    integer :: k
+    double precision dimension(ldq,*) :: q
+    integer, optional,check(shape(q,0)==ldq),depend(q) :: ldq=shape(q,0)
+    double precision dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    integer :: j
+    double precision dimension(*) :: x
+    double precision dimension(*) :: w
+end subroutine dqrinc
+subroutine dqrinr(m,n,q,ldq,r,ldr,j,x,w) ! in dqrinr.f
+    integer :: m
+    integer :: n
+    double precision dimension(ldq,*) :: q
+    integer, optional,check(shape(q,0)==ldq),depend(q) :: ldq=shape(q,0)
+    double precision dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    integer :: j
+    double precision dimension(*) :: x
+    double precision dimension(*) :: w
+end subroutine dqrinr
+subroutine dqrot(dir,m,n,q,ldq,c,s) ! in dqrot.f
+    character :: dir
+    integer :: m
+    integer :: n
+    double precision dimension(ldq,*) :: q
+    integer, optional,check(shape(q,0)==ldq),depend(q) :: ldq=shape(q,0)
+    double precision dimension(*) :: c
+    double precision dimension(*) :: s
+end subroutine dqrot
+subroutine dqrqh(m,n,r,ldr,c,s) ! in dqrqh.f
+    integer :: m
+    integer :: n
+    double precision dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    double precision dimension(*) :: c
+    double precision dimension(*) :: s
+end subroutine dqrqh
+subroutine dqrshc(m,n,k,q,ldq,r,ldr,i,j,w) ! in dqrshc.f
+    integer :: m
+    integer :: n
+    integer :: k
+    double precision dimension(ldq,*) :: q
+    integer, optional,check(shape(q,0)==ldq),depend(q) :: ldq=shape(q,0)
+    double precision dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    integer :: i
+    integer :: j
+    double precision dimension(*) :: w
+end subroutine dqrshc
+subroutine dqrtv1(n,u,w) ! in dqrtv1.f
+    integer :: n
+    double precision dimension(*) :: u
+    double precision dimension(*) :: w
+end subroutine dqrtv1
+subroutine sch1dn(n,r,ldr,u,w,info) ! in sch1dn.f
+    integer :: n
+    real dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    real dimension(*) :: u
+    real dimension(*) :: w
+    integer :: info
+end subroutine sch1dn
+subroutine sch1up(n,r,ldr,u,w) ! in sch1up.f
+    integer :: n
+    real dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    real dimension(*) :: u
+    real dimension(*) :: w
+end subroutine sch1up
+subroutine schdex(n,r,ldr,j,w) ! in schdex.f
+    integer :: n
+    real dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    integer :: j
+    real dimension(*) :: w
+end subroutine schdex
+subroutine schinx(n,r,ldr,j,u,w,info) ! in schinx.f
+    integer :: n
+    real dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    integer :: j
+    real dimension(*) :: u
+    real dimension(*) :: w
+    integer :: info
+end subroutine schinx
+subroutine schshx(n,r,ldr,i,j,w) ! in schshx.f
+    integer :: n
+    real dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    integer :: i
+    integer :: j
+    real dimension(*) :: w
+end subroutine schshx
+subroutine sgqvec(m,n,q,ldq,u) ! in sgqvec.f
+    integer :: m
+    integer :: n
+    real dimension(ldq,*) :: q
+    integer, optional,check(shape(q,0)==ldq),depend(q) :: ldq=shape(q,0)
+    real dimension(*) :: u
+end subroutine sgqvec
+subroutine slu1up(m,n,l,ldl,r,ldr,u,v) ! in slu1up.f
+    integer :: m
+    integer :: n
+    real dimension(ldl,*) :: l
+    integer, optional,check(shape(l,0)==ldl),depend(l) :: ldl=shape(l,0)
+    real dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    real dimension(*) :: u
+    real dimension(*) :: v
+end subroutine slu1up
+subroutine slup1up(m,n,l,ldl,r,ldr,p,u,v,w) ! in slup1up.f
+    integer :: m
+    integer :: n
+    real dimension(ldl,*) :: l
+    integer, optional,check(shape(l,0)==ldl),depend(l) :: ldl=shape(l,0)
+    real dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    integer dimension(*) :: p
+    real dimension(*) :: u
+    real dimension(*) :: v
+    real dimension(*) :: w
+end subroutine slup1up
+subroutine sqhqr(m,n,r,ldr,c,s) ! in sqhqr.f
+    integer :: m
+    integer :: n
+    real dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    real dimension(*) :: c
+    real dimension(*) :: s
+end subroutine sqhqr
+subroutine sqr1up(m,n,k,q,ldq,r,ldr,u,v,w) ! in sqr1up.f
+    integer :: m
+    integer :: n
+    integer :: k
+    real dimension(ldq,*) :: q
+    integer, optional,check(shape(q,0)==ldq),depend(q) :: ldq=shape(q,0)
+    real dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    real dimension(*) :: u
+    real dimension(*) :: v
+    real dimension(*) :: w
+end subroutine sqr1up
+subroutine sqrdec(m,n,k,q,ldq,r,ldr,j,w) ! in sqrdec.f
+    integer :: m
+    integer :: n
+    integer :: k
+    real dimension(ldq,*) :: q
+    integer, optional,check(shape(q,0)==ldq),depend(q) :: ldq=shape(q,0)
+    real dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    integer :: j
+    real dimension(*) :: w
+end subroutine sqrdec
+subroutine sqrder(m,n,q,ldq,r,ldr,j,w) ! in sqrder.f
+    integer :: m
+    integer :: n
+    real dimension(ldq,*) :: q
+    integer, optional,check(shape(q,0)==ldq),depend(q) :: ldq=shape(q,0)
+    real dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    integer :: j
+    real dimension(*) :: w
+end subroutine sqrder
+subroutine sqrinc(m,n,k,q,ldq,r,ldr,j,x,w) ! in sqrinc.f
+    integer :: m
+    integer :: n
+    integer :: k
+    real dimension(ldq,*) :: q
+    integer, optional,check(shape(q,0)==ldq),depend(q) :: ldq=shape(q,0)
+    real dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    integer :: j
+    real dimension(*) :: x
+    real dimension(*) :: w
+end subroutine sqrinc
+subroutine sqrinr(m,n,q,ldq,r,ldr,j,x,w) ! in sqrinr.f
+    integer :: m
+    integer :: n
+    real dimension(ldq,*) :: q
+    integer, optional,check(shape(q,0)==ldq),depend(q) :: ldq=shape(q,0)
+    real dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    integer :: j
+    real dimension(*) :: x
+    real dimension(*) :: w
+end subroutine sqrinr
+subroutine sqrot(dir,m,n,q,ldq,c,s) ! in sqrot.f
+    character :: dir
+    integer :: m
+    integer :: n
+    real dimension(ldq,*) :: q
+    integer, optional,check(shape(q,0)==ldq),depend(q) :: ldq=shape(q,0)
+    real dimension(*) :: c
+    real dimension(*) :: s
+end subroutine sqrot
+subroutine sqrqh(m,n,r,ldr,c,s) ! in sqrqh.f
+    integer :: m
+    integer :: n
+    real dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    real dimension(*) :: c
+    real dimension(*) :: s
+end subroutine sqrqh
+subroutine sqrshc(m,n,k,q,ldq,r,ldr,i,j,w) ! in sqrshc.f
+    integer :: m
+    integer :: n
+    integer :: k
+    real dimension(ldq,*) :: q
+    integer, optional,check(shape(q,0)==ldq),depend(q) :: ldq=shape(q,0)
+    real dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    integer :: i
+    integer :: j
+    real dimension(*) :: w
+end subroutine sqrshc
+subroutine sqrtv1(n,u,w) ! in sqrtv1.f
+    integer :: n
+    real dimension(*) :: u
+    real dimension(*) :: w
+end subroutine sqrtv1
+subroutine zaxcpy(n,a,x,incx,y,incy) ! in zaxcpy.f
+    integer :: n
+    double complex :: a
+    double complex dimension(*) :: x
+    integer :: incx
+    double complex dimension(*) :: y
+    integer :: incy
+end subroutine zaxcpy
+subroutine zch1dn(n,r,ldr,u,rw,info) ! in zch1dn.f
+    integer :: n
+    double complex dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    double complex dimension(*) :: u
+    double precision dimension(*) :: rw
+    integer :: info
+end subroutine zch1dn
+subroutine zch1up(n,r,ldr,u,w) ! in zch1up.f
+    integer :: n
+    double complex dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    double complex dimension(*) :: u
+    double precision dimension(*) :: w
+end subroutine zch1up
+subroutine zchdex(n,r,ldr,j,rw) ! in zchdex.f
+    integer :: n
+    double complex dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    integer :: j
+    double precision dimension(*) :: rw
+end subroutine zchdex
+subroutine zchinx(n,r,ldr,j,u,rw,info) ! in zchinx.f
+    integer :: n
+    double complex dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    integer :: j
+    double complex dimension(*) :: u
+    double complex dimension(*) :: rw
+    integer :: info
+end subroutine zchinx
+subroutine zchshx(n,r,ldr,i,j,w,rw) ! in zchshx.f
+    integer :: n
+    double complex dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    integer :: i
+    integer :: j
+    double complex dimension(*) :: w
+    double precision dimension(*) :: rw
+end subroutine zchshx
+subroutine zgqvec(m,n,q,ldq,u) ! in zgqvec.f
+    integer :: m
+    integer :: n
+    double complex dimension(ldq,*) :: q
+    integer, optional,check(shape(q,0)==ldq),depend(q) :: ldq=shape(q,0)
+    double complex dimension(*) :: u
+end subroutine zgqvec
+subroutine zlu1up(m,n,l,ldl,r,ldr,u,v) ! in zlu1up.f
+    integer :: m
+    integer :: n
+    double complex dimension(ldl,*) :: l
+    integer, optional,check(shape(l,0)==ldl),depend(l) :: ldl=shape(l,0)
+    double complex dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    double complex dimension(*) :: u
+    double complex dimension(*) :: v
+end subroutine zlu1up
+subroutine zlup1up(m,n,l,ldl,r,ldr,p,u,v,w) ! in zlup1up.f
+    integer :: m
+    integer :: n
+    double complex dimension(ldl,*) :: l
+    integer, optional,check(shape(l,0)==ldl),depend(l) :: ldl=shape(l,0)
+    double complex dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    integer dimension(*) :: p
+    double complex dimension(*) :: u
+    double complex dimension(*) :: v
+    double complex dimension(*) :: w
+end subroutine zlup1up
+subroutine zqhqr(m,n,r,ldr,c,s) ! in zqhqr.f
+    integer :: m
+    integer :: n
+    double complex dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    double precision dimension(*) :: c
+    double complex dimension(*) :: s
+end subroutine zqhqr
+subroutine zqr1up(m,n,k,q,ldq,r,ldr,u,v,w,rw) ! in zqr1up.f
+    integer :: m
+    integer :: n
+    integer :: k
+    double complex dimension(ldq,*) :: q
+    integer, optional,check(shape(q,0)==ldq),depend(q) :: ldq=shape(q,0)
+    double complex dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    double complex dimension(*) :: u
+    double complex dimension(*) :: v
+    double complex dimension(*) :: w
+    double precision dimension(*) :: rw
+end subroutine zqr1up
+subroutine zqrdec(m,n,k,q,ldq,r,ldr,j,rw) ! in zqrdec.f
+    integer :: m
+    integer :: n
+    integer :: k
+    double complex dimension(ldq,*) :: q
+    integer, optional,check(shape(q,0)==ldq),depend(q) :: ldq=shape(q,0)
+    double complex dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    integer :: j
+    double precision dimension(*) :: rw
+end subroutine zqrdec
+subroutine zqrder(m,n,q,ldq,r,ldr,j,w,rw) ! in zqrder.f
+    integer :: m
+    integer :: n
+    double complex dimension(ldq,*) :: q
+    integer, optional,check(shape(q,0)==ldq),depend(q) :: ldq=shape(q,0)
+    double complex dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    integer :: j
+    double complex dimension(*) :: w
+    double precision dimension(*) :: rw
+end subroutine zqrder
+subroutine zqrinc(m,n,k,q,ldq,r,ldr,j,x,rw) ! in zqrinc.f
+    integer :: m
+    integer :: n
+    integer :: k
+    double complex dimension(ldq,*) :: q
+    integer, optional,check(shape(q,0)==ldq),depend(q) :: ldq=shape(q,0)
+    double complex dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    integer :: j
+    double complex dimension(*) :: x
+    double precision dimension(*) :: rw
+end subroutine zqrinc
+subroutine zqrinr(m,n,q,ldq,r,ldr,j,x,rw) ! in zqrinr.f
+    integer :: m
+    integer :: n
+    double complex dimension(ldq,*) :: q
+    integer, optional,check(shape(q,0)==ldq),depend(q) :: ldq=shape(q,0)
+    double complex dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    integer :: j
+    double complex dimension(*) :: x
+    double precision dimension(*) :: rw
+end subroutine zqrinr
+subroutine zqrot(dir,m,n,q,ldq,c,s) ! in zqrot.f
+    character :: dir
+    integer :: m
+    integer :: n
+    double complex dimension(ldq,*) :: q
+    integer, optional,check(shape(q,0)==ldq),depend(q) :: ldq=shape(q,0)
+    double precision dimension(*) :: c
+    double complex dimension(*) :: s
+end subroutine zqrot
+subroutine zqrqh(m,n,r,ldr,c,s) ! in zqrqh.f
+    integer :: m
+    integer :: n
+    double complex dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    double precision dimension(*) :: c
+    double complex dimension(*) :: s
+end subroutine zqrqh
+subroutine zqrshc(m,n,k,q,ldq,r,ldr,i,j,w,rw) ! in zqrshc.f
+    integer :: m
+    integer :: n
+    integer :: k
+    double complex dimension(ldq,*) :: q
+    integer, optional,check(shape(q,0)==ldq),depend(q) :: ldq=shape(q,0)
+    double complex dimension(ldr,*) :: r
+    integer, optional,check(shape(r,0)==ldr),depend(r) :: ldr=shape(r,0)
+    integer :: i
+    integer :: j
+    double complex dimension(*) :: w
+    double precision dimension(*) :: rw
+end subroutine zqrshc
+subroutine zqrtv1(n,u,w) ! in zqrtv1.f
+    integer :: n
+    double complex dimension(*) :: u
+    double precision dimension(*) :: w
+end subroutine zqrtv1
+
+! This file was auto-generated with f2py (version:2).
+! See http://cens.ioc.ee/projects/f2py2e/
